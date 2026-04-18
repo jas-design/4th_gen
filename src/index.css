@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary: #ED1935;
+  --color-secondary: #3D409A;
+  --color-accent: #ED1935;
+  --color-dark: #1A1A1A;
+  --color-light: #F8F9FA;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-dark bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-secondary;
+  }
+}
+
+.glass-header {
+  @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300;
+}
+
+.cta-button-primary {
+  @apply px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95 text-center;
+}
+
+.cta-button-secondary {
+  @apply px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-blue-900 transition-all duration-300 shadow-lg shadow-secondary/20 hover:shadow-secondary/40 active:scale-95 text-center;
+}
+
+.outline-button {
+  @apply px-6 py-3 border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary hover:text-white transition-all duration-300 active:scale-95 text-center;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+}
